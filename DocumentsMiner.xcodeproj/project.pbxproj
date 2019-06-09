@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38A7FB692E27547DE2B010DA /* libPods-DocumentsMiner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8D80E0B7F576EFB1A15794 /* libPods-DocumentsMiner.a */; };
 		6628330121EF726A00FD2EAD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628330021EF726A00FD2EAD /* main.swift */; };
+		668C8E7622AD50DC000F0418 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = 668C8E7522AD50DC000F0418 /* Kanna */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,11 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1A8D80E0B7F576EFB1A15794 /* libPods-DocumentsMiner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DocumentsMiner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		662832FD21EF726A00FD2EAD /* DocumentsMiner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DocumentsMiner; sourceTree = BUILT_PRODUCTS_DIR; };
 		6628330021EF726A00FD2EAD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		9CABC6297F496B0DF0B3C860 /* Pods-DocumentsMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocumentsMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-DocumentsMiner/Pods-DocumentsMiner.release.xcconfig"; sourceTree = "<group>"; };
-		CE2BB7D98D51990424CF4229 /* Pods-DocumentsMiner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocumentsMiner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DocumentsMiner/Pods-DocumentsMiner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,37 +33,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38A7FB692E27547DE2B010DA /* libPods-DocumentsMiner.a in Frameworks */,
+				668C8E7622AD50DC000F0418 /* Kanna in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17F0B532E447EEC0A821764B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CE2BB7D98D51990424CF4229 /* Pods-DocumentsMiner.debug.xcconfig */,
-				9CABC6297F496B0DF0B3C860 /* Pods-DocumentsMiner.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5746935176965868BE7F4E37 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1A8D80E0B7F576EFB1A15794 /* libPods-DocumentsMiner.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		662832F421EF726A00FD2EAD = {
 			isa = PBXGroup;
 			children = (
 				662832FF21EF726A00FD2EAD /* DocumentsMiner */,
 				662832FE21EF726A00FD2EAD /* Products */,
-				17F0B532E447EEC0A821764B /* Pods */,
-				5746935176965868BE7F4E37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,7 +71,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6628330421EF726A00FD2EAD /* Build configuration list for PBXNativeTarget "DocumentsMiner" */;
 			buildPhases = (
-				E409E23E81020CAF99F3B622 /* [CP] Check Pods Manifest.lock */,
 				662832F921EF726A00FD2EAD /* Sources */,
 				662832FA21EF726A00FD2EAD /* Frameworks */,
 				662832FB21EF726A00FD2EAD /* CopyFiles */,
@@ -103,6 +80,9 @@
 			dependencies = (
 			);
 			name = DocumentsMiner;
+			packageProductDependencies = (
+				668C8E7522AD50DC000F0418 /* Kanna */,
+			);
 			productName = DocumentsMiner;
 			productReference = 662832FD21EF726A00FD2EAD /* DocumentsMiner */;
 			productType = "com.apple.product-type.tool";
@@ -114,7 +94,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Kazuki Ohara";
 				TargetAttributes = {
 					662832FC21EF726A00FD2EAD = {
@@ -128,8 +108,12 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 662832F421EF726A00FD2EAD;
+			packageReferences = (
+				668C8E7422AD50DC000F0418 /* XCRemoteSwiftPackageReference "Kanna" */,
+			);
 			productRefGroup = 662832FE21EF726A00FD2EAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,31 +122,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E409E23E81020CAF99F3B622 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DocumentsMiner-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		662832F921EF726A00FD2EAD /* Sources */ = {
@@ -227,7 +186,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -282,7 +241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -293,23 +252,23 @@
 		};
 		6628330521EF726A00FD2EAD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE2BB7D98D51990424CF4229 /* Pods-DocumentsMiner.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T6MHKM77M;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		6628330621EF726A00FD2EAD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CABC6297F496B0DF0B3C860 /* Pods-DocumentsMiner.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T6MHKM77M;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -335,6 +294,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		668C8E7422AD50DC000F0418 /* XCRemoteSwiftPackageReference "Kanna" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tid-kijyun/Kanna.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		668C8E7522AD50DC000F0418 /* Kanna */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 668C8E7422AD50DC000F0418 /* XCRemoteSwiftPackageReference "Kanna" */;
+			productName = Kanna;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 662832F521EF726A00FD2EAD /* Project object */;
 }
